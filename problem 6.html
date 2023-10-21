@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Fruits</title>
+</head>
+<body>
+    <h1>My Favorite Fruits</h1>
+
+    <button id="showFruitsButton">Show Fruits</button>
+
+    <p id="fruitsList"></p>
+
+    <script>
+        // Array of favorite fruits
+        var favoriteFruits = ["Apple", "Banana","pineapple", "Orange", "papaya", "Mango"];
+
+        // Function to display the list as an ordered list
+        function displayFruits() {
+            var fruitsList = document.getElementById("fruitsList");
+            fruitsList.innerHTML = "<ol>" + favoriteFruits.map(fruit => "<li>" + fruit + "</li>").join("") + "</ol>";
+        }
+
+        // using above  function to the button click event
+        document.getElementById("showFruitsButton").addEventListener("click", displayFruits);
+    </script>
+</body>
+</html>
